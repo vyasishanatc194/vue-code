@@ -1,0 +1,97 @@
+.app-notifier {
+  position: fixed;
+  top: 20px !important;
+  width: 300px;
+  z-index: 9999;
+
+  .notify {
+    border-radius: $border-radius;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #c5cacd;
+    text-align: left;
+    padding: 14px 34px 14px 1rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+
+  .notify-content {
+    padding-left: 40px;
+    position: relative;
+  }
+
+  .notify-icon {
+    color: theme-color('primary');
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .warn .notify-icon {
+    color: theme-color(warning);
+  }
+
+  .error .notify-icon {
+    color: theme-color(danger);
+  }
+
+  .success .notify-icon {
+    color: theme-color(success);
+  }
+
+  .btn-close {
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.notify-left-enter-active,
+.notify-left-leave-active,
+.notify-right-enter-active,
+.notify-right-leave-active,
+.notify-top-enter-active,
+.notify-top-leave-active,
+.notify-bottom-enter-active,
+.notify-bottom-leave-active {
+  transition: all 0.35s;
+}
+
+.notify-left-enter,
+.notify-left-leave-to {
+  opacity: 0;
+  transform: translateX(-300px);
+}
+
+.notify-right-enter,
+.notify-right-leave-to {
+  opacity: 0;
+  transform: translateX(336px);
+}
+
+.notify-fade-enter-active,
+.notify-fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.notify-fade-enter,
+.notify-fade-leave-to {
+  opacity: 0;
+}
+
+.notify-top-enter,
+.notify-top-leave-to {
+  opacity: 0;
+  transform: translateY(-120px);
+}
+
+.notify-bottom-enter,
+.notify-bottom-leave-to {
+  opacity: 0;
+  transform: translateY(120px);
+}
